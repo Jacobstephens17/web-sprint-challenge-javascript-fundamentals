@@ -23,10 +23,16 @@ myFunction();
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-const summation = zooAnimals.reduce(function(accumulator, item){
-  return accumulator + item;
-}, 0);
- console.log(summation(4));
+function summation (param){
+  let counter = 0;
+  for(let i = 0; i <= param ; i++){
+    counter += param ;
+    param --;
+  }
+  return counter + 1;
+}
+console.log(summation(4));
+
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -48,7 +54,6 @@ const zooAnimals = [
 The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 */
 
-const animalNames = displayNames;
 const displayNames = [];
 zooAnimals.forEach(item => displayNames.push(`Name: ${item.animal_name}, Scientific: ${item.scientific_name}`));
 
@@ -78,6 +83,7 @@ The zoos need to know their total animal population across the United States. Fi
 const USApop = zooAnimals.reduce(function(accumulator, item){
 return accumulator + item.population;
 }, 0);
+
 console.log(USApop);
 
 
