@@ -25,13 +25,13 @@ myFunction();
 
 function summation (param){
   let counter = 0;
-  for(let i = 0; i <= param ; i++){
-    counter += param ;
-    param --;
+  for(let i = 0; i <= param ; i ++){
+    counter = i + counter;
   }
-  return counter + 1;
+  return counter;
 }
 console.log(summation(4));
+
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
